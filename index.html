@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM</title>
+    <style>
+        .green {
+            color: green;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <ul>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+    <br /><br />
+    <button id="myBtn">Click here</button>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function() {
+        $("#d1").text("Hi World");
+        $("#d2").html("<h1>Hi World</h1>");
+        $("ul").append("<li>Last Item</li>");
+        $("ul").prepend("<li>First Item</li>");
+        $("ul").before("<div>Before</div>");
+        $("ul").after("<div>After</div>");
+      });
+      $("#myBtn").click(function(){
+          $("#d2").toggleClass("green");
+      })
+    </script>
+  </body>
+</html>
